@@ -27,7 +27,7 @@
 static int N;
 static int MAX_ITERATIONS;
 static int SEED;
-static float CONVERGENCE_THRESHOLD;
+static double CONVERGENCE_THRESHOLD;
 
 #define SEPARATOR "------------------------------------\n"
 
@@ -39,7 +39,7 @@ void parse_arguments(int argc, char *argv[]);
 
 // Run the Jacobi solver
 // Returns the number of iterations performed
-int run(float *A, float *b, float *x, float *xtmp)
+int run(float* restrict A, float* restrict b, float* restrict x, float* restrict xtmp)
 {
   int itr;
   int row, col;
