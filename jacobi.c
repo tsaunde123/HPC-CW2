@@ -73,7 +73,6 @@ int run(float* restrict A, float* restrict b, float* restrict x, float* restrict
         }
 }
 
-
     // Swap pointers
     ptrtmp = x;
     x      = xtmp;
