@@ -1,34 +1,34 @@
-Running on host node31-030
-Time is Sat Nov 11 13:25:55 GMT 2017
+Running on host node31-029
+Time is Sun Nov 12 14:41:18 GMT 2017
 Directory is /panfs/panasas01/cosc/ts16802/CW2/newcw2
-PBS job ID is 6311662.master.cm.cluster
+PBS job ID is 6312709.master.cm.cluster
 ------------------------------------
 Matrix size:            1000x1000
 Maximum iterations:     20000
 Convergence threshold:  0.000100
 ------------------------------------
-Solution error = 0.050051
+Solution error = 0.050050
 Iterations     = 2957
-Total runtime  = 0.167723 seconds
-Solver runtime = 0.157752 seconds
+Total runtime  = 0.115960 seconds
+Solver runtime = 0.106024 seconds
 ------------------------------------
 ------------------------------------
 Matrix size:            2000x2000
 Maximum iterations:     20000
 Convergence threshold:  0.000100
 ------------------------------------
-Solution error = 0.099994
+Solution error = 0.099991
 Iterations     = 5479
-Total runtime  = 1.067581 seconds
-Solver runtime = 1.029527 seconds
+Total runtime  = 0.665001 seconds
+Solver runtime = 0.627065 seconds
 ------------------------------------
 ------------------------------------
 Matrix size:            4000x4000
 Maximum iterations:     20000
 Convergence threshold:  0.000100
 ------------------------------------
-Solution error = 0.199863
-Iterations     = 10040
-Total runtime  = 19.199371 seconds
-Solver runtime = 19.049485 seconds
+Solution error = 0.200055
+Iterations     = 10039
+Total runtime  = 17.868484 seconds
+Solver runtime = 17.718407 seconds
 ------------------------------------

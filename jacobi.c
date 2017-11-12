@@ -42,11 +42,12 @@ void parse_arguments(int argc, char *argv[]);
 // Returns the number of iterations performed
 int run(float* restrict A, float* restrict b, float* restrict x, float* restrict xtmp)
 {
-  int NUM_THREADS = 4;
+  int NUM_THREADS = 6;
   int threadid;
   int itr;
   int row, col;
-  float dot[NUM_THREADS];
+  //float dot[NUM_THREADS];
+  float dot;
   float diff;
   float sqdiff;
   float *ptrtmp;
@@ -56,20 +57,20 @@ int run(float* restrict A, float* restrict b, float* restrict x, float* restrict
   itr = 0;
   do
   {
-#pragma omp parallel shared(xtmp, dot) private(threadid)
+#pragma omp parallel shared(dot) private(threadid, row, col)
 {
         threadid = omp_get_thread_num();
-        // Perfom Jacobi iteration
+	// Perfom Jacobi iteration
 #pragma omp for
         for (row = 0; row < N; row++)
         {
-            dot[threadid] = 0.0;
+	    dot = 0.0;
             for (col = 0; col < N; col++)
             {
-             	dot[threadid] += A[row*N + col] * x[col];
+             	dot += A[row*N + col] * x[col];
             }
-            dot[threadid] -= A[row + row*N] * x[row];
-            xtmp[row] = (b[row] - dot[threadid]) / A[row + row*N];
+            dot -= A[row + row*N] * x[row];
+            xtmp[row] = (b[row] - dot) / A[row + row*N];
         }
 }
 
