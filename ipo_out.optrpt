@@ -7,8 +7,12 @@ Begin optimization report for: main(int, char **)
 
     Report from: OpenMP optimizations [openmp]
 
-OpenMP Construct at jacobi.c(64,1) inlined into jacobi.c(131,13)
+OpenMP Construct at jacobi.c(117,1)
 remark #16200: OpenMP DEFINED LOOP WAS PARALLELIZED
-OpenMP Construct at jacobi.c(60,1) inlined into jacobi.c(131,13)
+OpenMP Construct at jacobi.c(115,1)
+remark #16201: OpenMP DEFINED REGION WAS PARALLELIZED
+OpenMP Construct at jacobi.c(65,1) inlined into jacobi.c(148,13)
+remark #16200: OpenMP DEFINED LOOP WAS PARALLELIZED
+OpenMP Construct at jacobi.c(60,1) inlined into jacobi.c(148,13)
 remark #16201: OpenMP DEFINED REGION WAS PARALLELIZED
 ===========================================================================

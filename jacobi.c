@@ -42,10 +42,10 @@ void parse_arguments(int argc, char *argv[]);
 // Returns the number of iterations performed
 int run(float* restrict A, float* restrict b, float* restrict x, float* restrict xtmp)
 {
-  int NUM_THREADS = 6;
+  int NUM_THREADS = 16;
   int threadid;
   int itr;
-  int row, col;
+  //int row, col;
   //float dot[NUM_THREADS];
   float dot;
   float diff;
@@ -57,36 +57,39 @@ int run(float* restrict A, float* restrict b, float* restrict x, float* restrict
   itr = 0;
   do
   {
-#pragma omp parallel shared(dot) private(threadid, row, col)
+#pragma omp parallel private(dot) //private(row, col)
 {
-        threadid = omp_get_thread_num();
+//        threadid = omp_get_thread_num();
 	// Perfom Jacobi iteration
-#pragma omp for
-        for (row = 0; row < N; row++)
+	sqdiff = 0.0;
+#pragma omp for reduction(+:sqdiff)
+        for (int row = 0; row < N; row++)
         {
 	    dot = 0.0;
-            for (col = 0; col < N; col++)
+            for (int col = 0; col < N; col++)
             {
              	dot += A[row*N + col] * x[col];
             }
             dot -= A[row + row*N] * x[row];
             xtmp[row] = (b[row] - dot) / A[row + row*N];
-        }
+            diff = x[row] - xtmp[row];
+	    sqdiff += diff*diff;
+	}
 }
 
     // Swap pointers
     ptrtmp = x;
     x      = xtmp;
     xtmp   = ptrtmp;
-
+/*
     // Check for convergence
     sqdiff = 0.0;
-    for (row = 0; row < N; row++)
+    for (int row = 0; row < N; row++)
     {
       diff    = xtmp[row] - x[row];
       sqdiff += diff * diff;
     }
-
+*/
     itr++;
   } while ((itr < MAX_ITERATIONS) && (sqrt(sqdiff) > CONVERGENCE_THRESHOLD));
 
@@ -109,12 +112,27 @@ int main(int argc, char *argv[])
   printf(SEPARATOR);
 
   double total_start = get_timestamp();
-
+#pragma omp parallel 
+{
+#pragma omp for
+  for(int row = 0; row < N; row++)
+  {
+    for(int col = 0; col < N; col++)
+    {
+      A[row*N + col] = 0.0;
+    }
+    b[row] = 0.0;
+    x[row] = 0.0;
+    xtmp[row] = 0.0;
+  }
+}
   // Initialize data
+  //srand(SEED);
+  float rowsum;
   srand(SEED);
   for (int row = 0; row < N; row++)
   {
-    float rowsum = 0.0;
+    rowsum = 0.0;
     for (int col = 0; col < N; col++)
     {
       float value = rand()/(float)RAND_MAX;
@@ -125,7 +143,6 @@ int main(int argc, char *argv[])
     b[row] = rand()/(float)RAND_MAX;
     x[row] = 0.0;
   }
-
   // Run Jacobi solver
   double solve_start = get_timestamp();
   int itr = run(A, b, x, xtmp);

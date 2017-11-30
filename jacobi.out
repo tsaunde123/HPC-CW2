@@ -1,7 +1,25 @@
-Running on host node31-029
-Time is Sun Nov 12 14:41:18 GMT 2017
+Running on host node31-032
+Time is Thu Nov 30 12:42:20 GMT 2017
 Directory is /panfs/panasas01/cosc/ts16802/CW2/newcw2
-PBS job ID is 6312709.master.cm.cluster
+PBS job ID is 6375435.master.cm.cluster
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+   _OPENMP='201307'
+  [host] OMP_CANCELLATION='FALSE'
+  [host] OMP_DISPLAY_ENV='TRUE'
+  [host] OMP_DYNAMIC='FALSE'
+  [host] OMP_MAX_ACTIVE_LEVELS='2147483647'
+  [host] OMP_NESTED='FALSE'
+  [host] OMP_NUM_THREADS: value is not defined
+  [host] OMP_PLACES='cores'
+  [host] OMP_PROC_BIND='close'
+  [host] OMP_SCHEDULE='static'
+  [host] OMP_STACKSIZE='4M'
+  [host] OMP_THREAD_LIMIT='2147483647'
+  [host] OMP_WAIT_POLICY='PASSIVE'
+OPENMP DISPLAY ENVIRONMENT END
+
+
 ------------------------------------
 Matrix size:            1000x1000
 Maximum iterations:     20000
@@ -9,26 +27,187 @@ Convergence threshold:  0.000100
 ------------------------------------
 Solution error = 0.050050
 Iterations     = 2957
-Total runtime  = 0.115960 seconds
-Solver runtime = 0.106024 seconds
+Total runtime  = 0.294878 seconds
+Solver runtime = 0.257110 seconds
 ------------------------------------
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+   _OPENMP='201307'
+  [host] OMP_CANCELLATION='FALSE'
+  [host] OMP_DISPLAY_ENV='TRUE'
+  [host] OMP_DYNAMIC='FALSE'
+  [host] OMP_MAX_ACTIVE_LEVELS='2147483647'
+  [host] OMP_NESTED='FALSE'
+  [host] OMP_NUM_THREADS: value is not defined
+  [host] OMP_PLACES='cores'
+  [host] OMP_PROC_BIND='close'
+  [host] OMP_SCHEDULE='static'
+  [host] OMP_STACKSIZE='4M'
+  [host] OMP_THREAD_LIMIT='2147483647'
+  [host] OMP_WAIT_POLICY='PASSIVE'
+OPENMP DISPLAY ENVIRONMENT END
+
+
+------------------------------------
+Matrix size:            1000x1000
+Maximum iterations:     20000
+Convergence threshold:  0.000100
+------------------------------------
+Solution error = 0.050050
+Iterations     = 2957
+Total runtime  = 0.254404 seconds
+Solver runtime = 0.217547 seconds
+------------------------------------
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+   _OPENMP='201307'
+  [host] OMP_CANCELLATION='FALSE'
+  [host] OMP_DISPLAY_ENV='TRUE'
+  [host] OMP_DYNAMIC='FALSE'
+  [host] OMP_MAX_ACTIVE_LEVELS='2147483647'
+  [host] OMP_NESTED='FALSE'
+  [host] OMP_NUM_THREADS: value is not defined
+  [host] OMP_PLACES='cores'
+  [host] OMP_PROC_BIND='close'
+  [host] OMP_SCHEDULE='static'
+  [host] OMP_STACKSIZE='4M'
+  [host] OMP_THREAD_LIMIT='2147483647'
+  [host] OMP_WAIT_POLICY='PASSIVE'
+OPENMP DISPLAY ENVIRONMENT END
+
+
 ------------------------------------
 Matrix size:            2000x2000
 Maximum iterations:     20000
 Convergence threshold:  0.000100
 ------------------------------------
-Solution error = 0.099991
+Solution error = 0.099999
 Iterations     = 5479
-Total runtime  = 0.665001 seconds
-Solver runtime = 0.627065 seconds
+Total runtime  = 0.482963 seconds
+Solver runtime = 0.381279 seconds
 ------------------------------------
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+   _OPENMP='201307'
+  [host] OMP_CANCELLATION='FALSE'
+  [host] OMP_DISPLAY_ENV='TRUE'
+  [host] OMP_DYNAMIC='FALSE'
+  [host] OMP_MAX_ACTIVE_LEVELS='2147483647'
+  [host] OMP_NESTED='FALSE'
+  [host] OMP_NUM_THREADS: value is not defined
+  [host] OMP_PLACES='cores'
+  [host] OMP_PROC_BIND='close'
+  [host] OMP_SCHEDULE='static'
+  [host] OMP_STACKSIZE='4M'
+  [host] OMP_THREAD_LIMIT='2147483647'
+  [host] OMP_WAIT_POLICY='PASSIVE'
+OPENMP DISPLAY ENVIRONMENT END
+
+
+------------------------------------
+Matrix size:            2000x2000
+Maximum iterations:     20000
+Convergence threshold:  0.000100
+------------------------------------
+Solution error = 0.099999
+Iterations     = 5479
+Total runtime  = 0.481048 seconds
+Solver runtime = 0.386395 seconds
+------------------------------------
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+   _OPENMP='201307'
+  [host] OMP_CANCELLATION='FALSE'
+  [host] OMP_DISPLAY_ENV='TRUE'
+  [host] OMP_DYNAMIC='FALSE'
+  [host] OMP_MAX_ACTIVE_LEVELS='2147483647'
+  [host] OMP_NESTED='FALSE'
+  [host] OMP_NUM_THREADS: value is not defined
+  [host] OMP_PLACES='cores'
+  [host] OMP_PROC_BIND='close'
+  [host] OMP_SCHEDULE='static'
+  [host] OMP_STACKSIZE='4M'
+  [host] OMP_THREAD_LIMIT='2147483647'
+  [host] OMP_WAIT_POLICY='PASSIVE'
+OPENMP DISPLAY ENVIRONMENT END
+
+
 ------------------------------------
 Matrix size:            4000x4000
 Maximum iterations:     20000
 Convergence threshold:  0.000100
 ------------------------------------
-Solution error = 0.200055
-Iterations     = 10039
-Total runtime  = 17.868484 seconds
-Solver runtime = 17.718407 seconds
+Solution error = 0.199875
+Iterations     = 10040
+Total runtime  = 7.523878 seconds
+Solver runtime = 7.160569 seconds
+------------------------------------
+OMP: Warning #181: OMP_PROC_BIND: ignored because KMP_AFFINITY has been defined
+OMP: Warning #181: OMP_PLACES: ignored because KMP_AFFINITY has been defined
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+   _OPENMP='201307'
+  [host] OMP_CANCELLATION='FALSE'
+  [host] OMP_DISPLAY_ENV='TRUE'
+  [host] OMP_DYNAMIC='FALSE'
+  [host] OMP_MAX_ACTIVE_LEVELS='2147483647'
+  [host] OMP_NESTED='FALSE'
+  [host] OMP_NUM_THREADS: value is not defined
+  [host] OMP_PLACES='cores'
+  [host] OMP_PROC_BIND='intel'
+  [host] OMP_SCHEDULE='static'
+  [host] OMP_STACKSIZE='4M'
+  [host] OMP_THREAD_LIMIT='2147483647'
+  [host] OMP_WAIT_POLICY='PASSIVE'
+OPENMP DISPLAY ENVIRONMENT END
+
+
+OMP: Info #204: KMP_AFFINITY: decoding x2APIC ids.
+OMP: Info #202: KMP_AFFINITY: Affinity capable, using global cpuid leaf 11 info
+OMP: Info #154: KMP_AFFINITY: Initial OS proc set respected: {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+OMP: Info #156: KMP_AFFINITY: 16 available OS procs
+OMP: Info #157: KMP_AFFINITY: Uniform topology
+OMP: Info #179: KMP_AFFINITY: 2 packages x 8 cores/pkg x 1 threads/core (16 total cores)
+OMP: Info #206: KMP_AFFINITY: OS proc to physical thread map:
+OMP: Info #171: KMP_AFFINITY: OS proc 0 maps to package 0 core 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 1 maps to package 0 core 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 2 maps to package 0 core 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 3 maps to package 0 core 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 4 maps to package 0 core 4 
+OMP: Info #171: KMP_AFFINITY: OS proc 5 maps to package 0 core 5 
+OMP: Info #171: KMP_AFFINITY: OS proc 6 maps to package 0 core 6 
+OMP: Info #171: KMP_AFFINITY: OS proc 7 maps to package 0 core 7 
+OMP: Info #171: KMP_AFFINITY: OS proc 8 maps to package 1 core 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 9 maps to package 1 core 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 10 maps to package 1 core 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 11 maps to package 1 core 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 12 maps to package 1 core 4 
+OMP: Info #171: KMP_AFFINITY: OS proc 13 maps to package 1 core 5 
+OMP: Info #171: KMP_AFFINITY: OS proc 14 maps to package 1 core 6 
+OMP: Info #171: KMP_AFFINITY: OS proc 15 maps to package 1 core 7 
+OMP: Info #242: KMP_AFFINITY: pid 111626 thread 0 bound to OS proc set {0}
+OMP: Info #242: KMP_AFFINITY: pid 111626 thread 1 bound to OS proc set {1}
+OMP: Info #242: KMP_AFFINITY: pid 111626 thread 2 bound to OS proc set {2}
+OMP: Info #242: KMP_AFFINITY: pid 111626 thread 3 bound to OS proc set {3}
+OMP: Info #242: KMP_AFFINITY: pid 111626 thread 4 bound to OS proc set {4}
+OMP: Info #242: KMP_AFFINITY: pid 111626 thread 5 bound to OS proc set {5}
+OMP: Info #242: KMP_AFFINITY: pid 111626 thread 6 bound to OS proc set {6}
+OMP: Info #242: KMP_AFFINITY: pid 111626 thread 7 bound to OS proc set {7}
+OMP: Info #242: KMP_AFFINITY: pid 111626 thread 8 bound to OS proc set {8}
+OMP: Info #242: KMP_AFFINITY: pid 111626 thread 9 bound to OS proc set {9}
+OMP: Info #242: KMP_AFFINITY: pid 111626 thread 10 bound to OS proc set {10}
+OMP: Info #242: KMP_AFFINITY: pid 111626 thread 11 bound to OS proc set {11}
+OMP: Info #242: KMP_AFFINITY: pid 111626 thread 12 bound to OS proc set {12}
+OMP: Info #242: KMP_AFFINITY: pid 111626 thread 13 bound to OS proc set {13}
+OMP: Info #242: KMP_AFFINITY: pid 111626 thread 14 bound to OS proc set {14}
+OMP: Info #242: KMP_AFFINITY: pid 111626 thread 15 bound to OS proc set {15}
+------------------------------------
+Matrix size:            4000x4000
+Maximum iterations:     20000
+Convergence threshold:  0.000100
+------------------------------------
+Solution error = 0.199875
+Iterations     = 10040
+Total runtime  = 7.531079 seconds
+Solver runtime = 7.182363 seconds
 ------------------------------------
